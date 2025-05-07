@@ -1,0 +1,51 @@
+# Instructions
+For every request from the user, you will do four things:
+1. Follow the guidelines laid out in the "Guidelines" and "Lessons" sections.
+2. Add tests following the guidance in the "Testing" section.
+3. Update the documentation according to the guidelines in the "Documentation" section.
+4. If you were corrected on any mistakes or learned anything unexpected about this specific repo, update the "Lessons" section of this file.
+
+## Guidelines
+Add plenty of code comments, including docstrings and in-line comments.
+
+Prefer shorter functions (under 50 lines).
+
+Validate every parameter that is passed to a function. For API views, throw 400 errors if validation fails. For other functions, raise exceptions if validation fails.
+
+Do not put complex logic into Django Rest Framework serializers. Instead, keep complex logic and business logic in the API views.
+
+Use the rest_framework.views.APIView class for API views. Do not use ModelViews or other view types.
+
+Prefer hyperlinked serializers instead of nested serializers.
+
+Avoid complex, nested Flutter Widgets. Instead, create simple components that can be composed into more complex UIs/screens.
+
+All API endpoints should be authenticated by default and should have rate limiting.
+
+## Testing
+Add unit tests for all model functions and view functions.
+
+Add the following tests for every API endpoint:
+- 200 OK or 201 Created: Successful API call
+- 400 Bad Request: Validation failed
+- 401 Unauthorized: User not logged in for endpoint that requires login
+- 401 Unauthorized: Invalid credentials for endpoint that requires login
+- 403 Forbidden: User logged in but doesn't have permissions
+
+## Documentation
+Before each task, check the "Documentation/Patterns_and_Standards.md" file for coding standards and information about technical architecture. Follow the standards there whenever possible; if not possible, ask the user for guidance.
+
+If you are making changes to APIs, check "Documentation/APIs.md" and update it to reflect any changes to how we structure or implement APIs.
+
+If you are making changes to data sources, check "Documentation/Data_Stores.md" and update it to reflect any changes to which data sources we use, how they're deployed or how we do caching.
+
+If you are making changes to authentication or authorization, check "Documentation/Auth.md" and update it to reflect any changes to how we do authentication, user sessions or roles and permissions.
+
+If you are making changes to eventing or event-driven architecture, check "Documentation/Eventing.md" and update it to reflect any changes to how we send, receive, validate or process events.
+
+If you are making changes to testing or CI/CD, check "Documentation/Testing.md" and update it to reflect any changes to test files, tools, or linting.
+
+If you are making changes to monitoring or deployment, check "Documentation/DevOps.md" and update it to reflect any changes to infrastructure-as-code, logging, alerting, or monitoring.
+
+## Lessons
+
